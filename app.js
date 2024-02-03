@@ -14,7 +14,7 @@ const dbURI = 'mongodb+srv://data:1234@cluster0.j0caazh.mongodb.net/';
 mongoose
   .connect(dbURI)
   .then(() => {
-    app.listen(4000);
+    app.listen(process.env.PORT || 3300);
     console.log('Connected to the database');
   })
   .catch((err) => {
